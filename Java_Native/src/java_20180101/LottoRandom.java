@@ -1,5 +1,7 @@
 package java_20180101;
 
+import java.util.Arrays;
+
 public class LottoRandom {
 	static final int MAX_NUMBER = 6;
 
@@ -23,8 +25,10 @@ public class LottoRandom {
 					sum += inputNum;
 				}
 				if(!(sum>150 && sum<170)) {
+					// 최종 sum 값을 보고 조건에 안맞으면 리
 					sum = 0;
-					for(int y=0 ; y<MAX_NUMBER ; y++) { lotto[y] = 0; }
+					Arrays.fill(lotto, 0);
+					//for(int y=0 ; y<MAX_NUMBER ; y++) { lotto[y] = 0; }
 				}
 			} else if(sum >150) {
 				judge = false;
